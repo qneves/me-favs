@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-image: url(./estrelas.png);
+    background-color: #020202f0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 120px;
+    margin: auto;
+    padding-top: 32px;
+}
+
+header div {
+    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+    padding: 4px;
+    transition: .3s;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    width: 90%;
+    padding: 50px 0;
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section{
+    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
+    padding-top: 4px;
+    border-radius: 13px;
+}
+
+section h2 {
+    color: rgb(255, 255, 255);
+}
+
+section p {
+    color: rgb(179, 179, 179);
+}
+
+section div{
+    background-color: #222222;
+    border-radius: 8px;
+    padding: 24px 32px;
+}
+
+section ul {
+    padding-top: 30px;
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+section ul li {
+    transition: .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+section img {
+    width: 90px;
+    border: 1px solid #63636379;
+    border-radius: 8px;
+}
+
+/* animations */
+
+header div { 
+    animation: fromLeft .7s .4s backwards;
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
