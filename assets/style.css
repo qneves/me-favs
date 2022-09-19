@@ -14,17 +14,19 @@ body {
 }
 
 header {
-    width: 120px;
-    margin: auto;
     padding-top: 32px;
+    height: calc(120px + 32px);
 }
 
 header div {
-    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
+    width: 120px;
     margin: auto;
-    display: flex;
+
+    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
     border-radius: 50%;
+    display: flex;
     padding: 4px;
+    
     transition: .3s;
 }
 
@@ -34,13 +36,15 @@ header div:hover{
 
 header img {
     width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
 main {
     width: 90%;
-    padding: 50px 0;
     margin: auto;
+    margin-top: 32px;
+    margin-bottom: 44px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -69,10 +73,13 @@ section div{
 
 section ul {
     padding-top: 30px;
+    padding-bottom: 8px;
     display: flex;
     gap: 16px;
 
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+
+    overflow-x: scroll;
 }
 
 section ul li {
