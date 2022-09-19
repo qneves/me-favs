@@ -6,11 +6,13 @@
 }
 
 body {
-    background-image: url(./estrelas.png);
     background-color: #020202f0;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     font-family: "Montserrat", sans-serif;
+
+    /* background-image: url(./estrelas.png); */
+    /* background-size: 100% auto; */
+    /* background-repeat: no-repeat; */
+
 }
 
 header {
@@ -137,4 +139,23 @@ main section:nth-child(3) {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes opacityStar {
+    from {
+        opacity: 2;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+.stars {
+    animation: opacityStar 1s infinite alternate;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
 }
