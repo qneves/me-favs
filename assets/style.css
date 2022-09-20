@@ -128,6 +128,15 @@ section h2 {
 
 section p {
     color: rgb(179, 179, 179);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+section p img {
+    width: 3rem;
+    border: none;
+    border-radius: 0;
 }
 
 section div {
@@ -150,6 +159,7 @@ section ul {
 section ul li {
     transition: 0.3s;
 }
+
 
 section ul li:hover {
     transform: scale(1.1);
@@ -220,4 +230,18 @@ main section:nth-child(3) {
     left: 0;
     width: 100vw;
     z-index: -1;
+}
+
+@keyframes bouceRight {
+    from {
+        transform: translateX(-1rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.arrowdance {
+    animation: bouceRight .8s infinite alternate;
 }
