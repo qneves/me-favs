@@ -1,38 +1,64 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 body {
     background-color: #020202f0;
-    font-family: "Montserrat", sans-serif;
+}
 
-    /* background-image: url(./estrelas.png); */
-    /* background-size: 100% auto; */
-    /* background-repeat: no-repeat; */
+*::-webkit-scrollbar {
+    background-color: #222222;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 2rem;
+}
 
+*::-webkit-scrollbar-thumb {
+    opacity: 0.5;
+    background-image: linear-gradient(
+        -45deg,
+        #01ffdd 0%,
+        #df70f5 50.52%,
+        #ee00f7 100%
+    );
+    border-radius: 2rem;
 }
 
 header {
-    padding-top: 32px;
-    height: calc(120px + 32px);
+    margin: 3.2rem auto;
+    /* height: 12.4rem; */
+    width: 90%;
 }
 
 header div {
-    width: 120px;
+    width: 12rem;
     margin: auto;
 
-    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
+    background-image: linear-gradient(
+        -90deg,
+        #01ffdd 0%,
+        #df70f5 50.52%,
+        #ee00f7 100%
+    );
     border-radius: 50%;
     display: flex;
-    padding: 4px;
-    
-    transition: .3s;
+    padding: .4rem;
+
+    transition: 0.3s;
 }
 
-header div:hover{
+header div:hover {
     transform: scale(1.1);
 }
 
@@ -42,21 +68,58 @@ header img {
     border-radius: 50%;
 }
 
+header img.social {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+header h1 {
+    padding: 2rem 0 1.6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+header h1 i {
+    font-weight: bold;
+    font-style: normal;
+    position: relative;
+    font-size: 2rem;
+
+}
+
+header h1 i::after {
+    background: url(risco.svg);
+
+    height: 2.5rem;
+    width: 6.3rem;
+    content: "";
+    position: absolute;
+    background-size: 100% 100%;
+    bottom: -1.5rem;
+    right: 0;   
+}
+
 main {
     width: 90%;
     margin: auto;
-    margin-top: 32px;
-    margin-bottom: 44px;
-    max-width: 600px;
+    margin-bottom: 4.4rem;
+    max-width: 60rem;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2.4rem;
 }
 
-section{
-    background-image: linear-gradient(-90deg,  #01ffdd 0%, #df70f5 50.52%, #ee00f7 100%);
-    padding-top: 4px;
-    border-radius: 13px;
+section {
+    background-image: linear-gradient(
+        -90deg,
+        #01ffdd 0%,
+        #df70f5 50.52%,
+        #ee00f7 100%
+    );
+    padding-top: .4rem;
+    border-radius: 1.3rem;
 }
 
 section h2 {
@@ -67,17 +130,17 @@ section p {
     color: rgb(179, 179, 179);
 }
 
-section div{
+section div {
     background-color: #222222;
-    border-radius: 8px;
-    padding: 24px 32px;
+    border-radius: .8rem;
+    padding: 2.4rem 3.2rem;
 }
 
 section ul {
-    padding-top: 30px;
-    padding-bottom: 8px;
+    padding-top: 3rem;
+    padding-bottom: .8rem;
     display: flex;
-    gap: 16px;
+    gap: 1.6rem;
 
     /* flex-wrap: wrap; */
 
@@ -85,42 +148,41 @@ section ul {
 }
 
 section ul li {
-    transition: .3s;
+    transition: 0.3s;
 }
 
-section ul li:hover{
+section ul li:hover {
     transform: scale(1.1);
 }
 
 section img {
-    width: 90px;
-    border: 1px solid #63636379;
-    border-radius: 8px;
+    width: 9rem;
+    border: .1rem solid #63636379;
+    border-radius: .8rem;
 }
 
 /* animations */
 
-header div { 
-    animation: fromLeft .7s .4s backwards;
+header div {
+    animation: fromLeft 0.7s 0.4s backwards;
 }
 
 main section {
-    animation: fromBottom .7s backwards;
+    animation: fromBottom 0.7s backwards;
 }
 
 main section:nth-child(2) {
-    animation-delay: .3s;
+    animation-delay: 0.3s;
 }
 
 main section:nth-child(3) {
-    animation-delay: .6s;
+    animation-delay: 0.6s;
 }
-
 
 @keyframes fromLeft {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-3rem);
     }
 
     to {
@@ -132,7 +194,7 @@ main section:nth-child(3) {
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(3rem);
     }
 
     to {
@@ -143,7 +205,7 @@ main section:nth-child(3) {
 
 @keyframes opacityStar {
     from {
-        opacity: 2;
+        opacity: 5;
     }
 
     to {
